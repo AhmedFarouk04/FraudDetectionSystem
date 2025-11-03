@@ -34,3 +34,73 @@ It’s designed to simulate how banking and fintech systems assess transaction r
 ---
 
 ## 🏗️ Project Structure
+
+---
+
+## 🧩 System Flow
+
+1. **Startup:**
+   - Loads users and transactions from `data.json`
+   - If no users exist, prompts to create one
+
+2. **Main Menu:**
+   - Add User 🧑  
+   - Switch User 🔄  
+   - Add Transaction 💳  
+   - View Dashboard 📊  
+   - Exit ❌  
+
+3. **On Transaction:**
+   - Analyzes transaction using active fraud rules  
+   - Displays visual “Risk Bar” and logs triggered rules  
+   - Automatically saves data to file  
+
+4. **Dashboard:**
+   - Shows risk averages across users  
+   - Displays alerts and trend indicators
+
+
+---
+
+## 🧮 Example Console Output
+
+```plaintext
+──────────────────────────────────────────────
+Fraud Detection System
+──────────────────────────────────────────────
+Current User: Ahmed (Egypt)
+
+Enter transaction for Ahmed (Egypt):
+Amount: 45000
+Country: Japan
+
+Analyzing transaction...
+Suspicious Transaction Detected!
+Triggered Rules:
+ - High Amount Rule
+ - Country Mismatch Rule
+
+██████████░░░░░░░░░░  50%  MEDIUM RISK
+──────────────────────────────────────────────
+End of transaction analysis
+
+
+Example Saved Data
+
+[
+  {
+    "Id": 1,
+    "Name": "Ahmed",
+    "Country": "Egypt",
+    "Transactions": [
+      {
+        "Id": 1,
+        "Amount": 45000,
+        "Country": "Japan",
+        "Time": "2025-11-03T14:00:00",
+        "RiskScore": 50
+      }
+    ]
+  }
+]
+
