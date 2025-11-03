@@ -85,22 +85,5 @@ Triggered Rules:
 End of transaction analysis
 
 
-Example Saved Data
 
-[
-  {
-    "Id": 1,
-    "Name": "Ahmed",
-    "Country": "Egypt",
-    "Transactions": [
-      {
-        "Id": 1,
-        "Amount": 45000,
-        "Country": "Japan",
-        "Time": "2025-11-03T14:00:00",
-        "RiskScore": 50
-      }
-    ]
-  }
-]
 
